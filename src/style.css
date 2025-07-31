@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-main: #5cbabc;
+  --drop-shadow-main: 0px 4px 10px 0px #63636340;
+  --shadow-image: 0px 4px 50px 0px #63636340;
+  --font-cairo: "Cairo", sans-serif;
+  --color-paragraph: #484848;
+}
+
+@utility btn {
+  @apply font-cairo font-semibold text-sm md:text-base rounded-lg py-3 md:px-20 px-8 text-center transition-all duration-500 ease-in-out;
+}
+
+body {
+  @apply bg-[#FBFBFB];
+}
+.container {
+  @apply relative max-w-screen-xl mx-auto px-4 md:py-20 py-8;
+}
+.nav-item {
+  @apply block pb-2 pt-2 px-3 font-cairo text-gray-900 text-base transition-all duration-500 ease-in-out  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:border-b md:hover:border-b-main md:hover:text-main md:px-0 md:mt-0 dark:text-white md:dark:hover:text-main dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent;
+}
+.nav-item.active {
+  @apply text-white bg-main md:bg-transparent md:text-main md:dark:text-main md:border-b md:border-b-main;
+}
+
+.nav-footer {
+  @apply text-white font-cairo text-base transition-all duration-500 ease-in-out hover:opacity-75;
+}
+
+.primary-btn {
+  @apply btn bg-main text-white  hover:bg-black;
+}
+
+.outline-btn {
+  @apply btn bg-transparent text-black outline outline-black hover:outline hover:outline-main hover:text-main;
+}
+.impact-box {
+  @apply bg-main rounded-2xl px-10 py-16 flex flex-col gap-8 items-center justify-center hover:bg-transparent hover:outline hover:outline-main transition-all ease-in-out duration-700;
+}
+.testimonial-box {
+  @apply relative shadow-image bg-white px-6 pt-20 pb-14;
+}
